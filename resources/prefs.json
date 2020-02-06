@@ -42,7 +42,7 @@
   "js.baseline.unsafe_eager_compilation.enabled": false,
   "js.discard_system_source.enabled": false,
   "js.dump_stack_on_debuggee_would_run.enabled": false,
-  "js.ion.enabled": true,
+  "js.ion.enabled": false,
   "js.ion.offthread_compilation.enabled": true,
   "js.ion.unsafe_eager_compilation.enabled": false,
   "js.mem.gc.allocation_threshold_avoid_interrupt_factor": 100,
