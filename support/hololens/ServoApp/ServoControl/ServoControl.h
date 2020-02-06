@@ -108,7 +108,8 @@ struct ServoControl : ServoControlT<ServoControl>, public servo::ServoDelegate {
                                            winrt::hstring);
   virtual void OnServoMediaSessionPlaybackStateChange(int);
   virtual void OnServoPromptAlert(winrt::hstring, bool);
-  virtual servo::Servo::PromptResult OnServoPromptOkCancel(winrt::hstring, bool);
+  virtual servo::Servo::PromptResult OnServoPromptOkCancel(winrt::hstring,
+                                                           bool);
   virtual servo::Servo::PromptResult OnServoPromptYesNo(winrt::hstring, bool);
   virtual std::optional<hstring> OnServoPromptInput(winrt::hstring,
                                                     winrt::hstring, bool);

@@ -519,7 +519,8 @@ void ServoControl::OnServoPromptAlert(winrt::hstring message, bool trusted) {
   PromptSync(title, message, L"OK", {}, {});
 }
 
-servo::Servo::PromptResult ServoControl::OnServoPromptOkCancel(winrt::hstring message, bool trusted) {
+servo::Servo::PromptResult
+ServoControl::OnServoPromptOkCancel(winrt::hstring message, bool trusted) {
   auto title = trusted ? L"" : mCurrentUrl + L" says:";
   auto [button, string] = PromptSync(title, message, L"OK", L"Cancel", {});
   if (button == Controls::ContentDialogResult::Primary) {
@@ -531,7 +532,8 @@ servo::Servo::PromptResult ServoControl::OnServoPromptOkCancel(winrt::hstring me
   }
 }
 
-servo::Servo::PromptResult ServoControl::OnServoPromptYesNo(winrt::hstring message, bool trusted) {
+servo::Servo::PromptResult
+ServoControl::OnServoPromptYesNo(winrt::hstring message, bool trusted) {
   auto title = trusted ? L"" : mCurrentUrl + L" says:";
   auto [button, string] = PromptSync(title, message, L"Yes", L"No", {});
   if (button == Controls::ContentDialogResult::Primary) {
